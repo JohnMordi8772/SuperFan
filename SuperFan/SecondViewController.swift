@@ -9,9 +9,9 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    
-    var code = []
-    var points = []
+    let sport: [String] = []
+    let code:[String] = []
+    let points:[String] = []
     
 
     override func viewDidLoad() {
