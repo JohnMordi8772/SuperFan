@@ -10,7 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    var code = []
+    var code = ["98362","19875","07520","76389","65930","84390","12485","06493","67054","18549","37589","09568"]
     var points = []
     
 
