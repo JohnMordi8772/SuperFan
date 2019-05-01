@@ -135,11 +135,17 @@
                                 <rect key="frame" x="159" y="254" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Redeem"/>
+                                <connections>
+                                    <action selector="redeemButton:" destination="S5K-cR-Dpo" eventType="touchUpInside" id="4Wi-xS-fkO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YTi-eD-LbD"/>
                     </view>
+                    <connections>
+                        <outlet property="codeTextField" destination="ykC-YL-ZaZ" id="CDG-5a-EV1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fms-zn-EYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

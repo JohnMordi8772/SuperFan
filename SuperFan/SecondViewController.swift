@@ -12,12 +12,18 @@ class SecondViewController: UIViewController {
     let sport: [String] = []
     let code:[String] = []
     let points:[String] = []
+    @IBOutlet weak var codeTextField: UITextField!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+     
+    }
+    @IBAction func redeemButton(_ sender: Any) {
+   var code = codeTextField.text
+        if (code )
+    
     }
     
 
