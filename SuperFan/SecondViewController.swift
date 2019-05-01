@@ -13,6 +13,7 @@ class SecondViewController: UIViewController {
     let code:[String] = []
     let points:[String] = []
     @IBOutlet weak var codeTextField: UITextField!
+    @IBOutlet weak var pointsLabel: UILabel!
     
 
     override func viewDidLoad() {
@@ -22,7 +23,11 @@ class SecondViewController: UIViewController {
     }
     @IBAction func redeemButton(_ sender: Any) {
    var code = codeTextField.text
-        if (code )
+        var points = pointsLabel.text
+        if (code == sport[0]) {
+            pointsLabel + 100
+            
+        }
     
     }
     
