@@ -25,7 +25,7 @@ class SecondViewController: UIViewController {
    var code = codeTextField.text
         var points = pointsLabel.text
         if (code == sport[0]) {
-            pointsLabel + 100
+          
             
         }
     
