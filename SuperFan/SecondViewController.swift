@@ -9,8 +9,9 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
     let sport: [String] = []
-    let code:[String] = []
+    let code:[String] = ["98362","19875","07520","76389","65930","84390","12485","06493","67054","18549","37589","09568"]
     let points:[String] = []
     @IBOutlet weak var codeTextField: UITextField!
     @IBOutlet weak var pointsLabel: UILabel!
