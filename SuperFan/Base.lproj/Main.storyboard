@@ -63,6 +63,9 @@
                                 <rect key="frame" x="164" y="617" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="S5K-cR-Dpo" kind="show" id="Etg-dL-VRm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -112,7 +115,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaG-il-1kt">
-                                <rect key="frame" x="109" y="71" width="156" height="21"/>
+                                <rect key="frame" x="109" y="109" width="156" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -144,12 +147,20 @@
                                     <action selector="redeemButton:" destination="S5K-cR-Dpo" eventType="touchUpInside" id="4Wi-xS-fkO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdP-na-wGp">
+                                <rect key="frame" x="166" y="144" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YTi-eD-LbD"/>
                     </view>
                     <connections>
                         <outlet property="codeTextField" destination="ykC-YL-ZaZ" id="CDG-5a-EV1"/>
+                        <outlet property="pointCounter" destination="LdP-na-wGp" id="anW-Zy-9g4"/>
                         <outlet property="pointsLabel" destination="zaG-il-1kt" id="R48-E8-XVk"/>
                     </connections>
                 </viewController>
@@ -161,4 +172,7 @@
     <resources>
         <image name="tiger" width="2231" height="2227"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Etg-dL-VRm"/>
+    </inferredMetricsTieBreakers>
 </document>
