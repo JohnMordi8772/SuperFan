@@ -74,7 +74,7 @@
                     <navigationItem key="navigationItem" id="8oZ-8R-R9f"/>
                     <connections>
                         <outlet property="titleLabel" destination="c0e-Zh-XRi" id="UPL-qg-k5B"/>
-                        <segue destination="S5K-cR-Dpo" kind="presentation" id="N9F-sk-9uD"/>
+                        <segue destination="S5K-cR-Dpo" kind="presentation" identifier="segueToSecondController" id="N9F-sk-9uD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -114,13 +114,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaG-il-1kt">
-                                <rect key="frame" x="109" y="109" width="156" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ykC-YL-ZaZ">
                                 <rect key="frame" x="109" y="216" width="156" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -147,8 +140,8 @@
                                     <action selector="redeemButton:" destination="S5K-cR-Dpo" eventType="touchUpInside" id="4Wi-xS-fkO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdP-na-wGp">
-                                <rect key="frame" x="166" y="144" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaG-il-1kt">
+                                <rect key="frame" x="109" y="62" width="156" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -160,7 +153,7 @@
                     </view>
                     <connections>
                         <outlet property="codeTextField" destination="ykC-YL-ZaZ" id="CDG-5a-EV1"/>
-                        <outlet property="pointCounter" destination="LdP-na-wGp" id="anW-Zy-9g4"/>
+                        <outlet property="nameLabel" destination="eGW-eF-gtX" id="3w7-h7-rHA"/>
                         <outlet property="pointsLabel" destination="zaG-il-1kt" id="R48-E8-XVk"/>
                     </connections>
                 </viewController>
@@ -173,6 +166,6 @@
         <image name="tiger" width="2231" height="2227"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Etg-dL-VRm"/>
+        <segue reference="N9F-sk-9uD"/>
     </inferredMetricsTieBreakers>
 </document>

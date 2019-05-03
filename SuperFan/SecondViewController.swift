@@ -9,24 +9,27 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    
+    let storage = UserDefaults.standard
     let sport:[String] = ["Football", "Basketball", "Baseball", "Soccer", "Volleyball", "Tennis", "Wrestling", "Softball", "Track and Field", "Golf", "Choir Concert", "Play", "Musical"]
     let code:[String] = ["98362","19875","07520","76389","65930","84390","12485","06493","67054","18549","37589","09568", "23458"]
     let points:[String] = []
     @IBOutlet weak var codeTextField: UITextField!
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var pointCounter: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = storage.string(forKey: "Username")
+        nameLabel.adjustsFontForContentSizeCategory = true
 
      
     }
     @IBAction func redeemButton(_ sender: Any) {
-   var textField = codeTextField.text
-        var points = pointsLabel.text
-        var counter: Int = 0
+        let textField = codeTextField.text
+        let points = pointsLabel.text
+        let counter: Int = 0
         pointCounter.text = String(0)
         if (textField == code[0]) {
             pointCounter.text = String(counter + 25)
