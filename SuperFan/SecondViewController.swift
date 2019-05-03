@@ -23,13 +23,65 @@ class SecondViewController: UIViewController {
      
     }
     @IBAction func redeemButton(_ sender: Any) {
-   var code = codeTextField.text
+   var textField = codeTextField.text
         var points = pointsLabel.text
-        if (code == sport[0]) {
-          
-            
+        if (textField == code[0]) {
+            points = points! + String(25)
+        pointsLabel.text = points
+          }
+        if (textField == code[1]) {
+            points = points! + String(50)
+            pointsLabel.text = points
         }
-    
+        if (textField == code[2]) {
+            points = points! + String(75)
+            pointsLabel.text = points
+        }
+        if (textField == code[3]) {
+            points = points! + String(75)
+            pointsLabel.text = points
+        }
+        if (textField == code[4]) {
+            points = points! + String(50)
+            pointsLabel.text = points
+        }
+        if (textField == code[5]) {
+            points = points! + String(100)
+            pointsLabel.text = points
+        }
+        if (textField == code[6]) {
+            points = points! + String(100)
+            pointsLabel.text = points
+        }
+   
+        if (textField == code[7]) {
+            points = points! + String(0)
+            pointsLabel.text = points
+        }
+        if (textField == code[8]) {
+            points = points! + String(75)
+            pointsLabel.text = points
+        }
+        if (textField == code[9]) {
+            points = points! + String(75)
+            pointsLabel.text = points
+        }
+        if (textField == code[10]) {
+            points = points! + String(150)
+            pointsLabel.text = points
+        }
+        if (textField == code[11]) {
+            points = points! + String(150)
+            pointsLabel.text = points
+        }
+        if (textField == code[12]) {
+            points = points! + String(75)
+            pointsLabel.text = points
+        }
+        if (textField == code[13]) {
+            points = points! + String(75)
+            pointsLabel.text = points
+        }
     }
     
 

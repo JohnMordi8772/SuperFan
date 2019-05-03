@@ -14,6 +14,10 @@ class ViewController: UIViewController {
 
     @IBAction func createAccountButton(_ sender: UIButton) {
         let alert = UIAlertController(title: "Account Creation", message: nil, preferredStyle: .alert)
+        alert.addTextField(configurationHandler: nil)
+        //alert.textFields[0]
+        alert.addTextField(configurationHandler: nil)
+        alert.addTextField(configurationHandler: nil)
     }
     
 }
