@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         alert.textFields![1].placeholder = "Create Password"
         alert.addTextField(configurationHandler: nil)
         alert.textFields![2].placeholder = "Confirm Password"
-        alert.addAction(UIAlertAction(title: "Finish", style: .default, handler: {action in self.storage.set(alert.textFields![0].text, forKey: "Username"); self.storage.set(alert.textFields![2].text, forKey: "Password")}))
+        alert.addAction(UIAlertAction(title: "Finish", style: .default, handler: {action in self.storage.set(alert.textFields![0].text, forKey: "Username"); self.storage.set(alert.textFields![2].text, forKey: "Password"); self.performSegue(withIdentifier: "segueToSecondController", sender: nil)}))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
