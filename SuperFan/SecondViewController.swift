@@ -20,7 +20,7 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+pointCounter.text = nil
      
     }
     @IBAction func redeemButton(_ sender: Any) {

@@ -51,6 +51,9 @@
                                 <rect key="frame" x="270" y="313" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="logButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n2y-gc-oAe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Super Fan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0e-Zh-XRi">
                                 <rect key="frame" x="18" y="64" width="338" height="96"/>
@@ -73,6 +76,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="8oZ-8R-R9f"/>
                     <connections>
+                        <outlet property="emailLog" destination="JJQ-km-riy" id="kth-MF-EW2"/>
+                        <outlet property="passwordLog" destination="HnS-bN-wMz" id="Dvh-eZ-yV4"/>
                         <outlet property="titleLabel" destination="c0e-Zh-XRi" id="UPL-qg-k5B"/>
                         <segue destination="S5K-cR-Dpo" kind="presentation" id="N9F-sk-9uD"/>
                     </connections>
