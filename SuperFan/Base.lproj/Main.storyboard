@@ -67,7 +67,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="S5K-cR-Dpo" kind="show" id="Etg-dL-VRm"/>
+                                    <segue destination="S5K-cR-Dpo" kind="show" identifier="segueToSecondController" id="Etg-dL-VRm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -171,6 +171,6 @@
         <image name="tiger" width="2231" height="2227"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="N9F-sk-9uD"/>
+        <segue reference="Etg-dL-VRm"/>
     </inferredMetricsTieBreakers>
 </document>
