@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     @IBAction func logButton(_ sender: Any) {
         if (emailLog.text == storage.string(forKey: "Username")) {
             if(passwordLog.text == storage.string(forKey: "Password")){
-       //performSegue(withIdentifier: segueToSecondViewController, sender: nil)
+       performSegue(withIdentifier: "segueToSecondController", sender: nil)
                 
             }
         }
