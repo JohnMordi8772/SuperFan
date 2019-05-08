@@ -79,7 +79,7 @@
                         <outlet property="emailLog" destination="JJQ-km-riy" id="kth-MF-EW2"/>
                         <outlet property="passwordLog" destination="HnS-bN-wMz" id="Dvh-eZ-yV4"/>
                         <outlet property="titleLabel" destination="c0e-Zh-XRi" id="UPL-qg-k5B"/>
-                        <segue destination="S5K-cR-Dpo" kind="presentation" id="N9F-sk-9uD"/>
+                        <segue destination="S5K-cR-Dpo" kind="presentation" identifier="segueToSecondController" id="N9F-sk-9uD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -178,6 +178,6 @@
         <image name="tiger" width="2231" height="2227"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Etg-dL-VRm"/>
+        <segue reference="N9F-sk-9uD"/>
     </inferredMetricsTieBreakers>
 </document>
