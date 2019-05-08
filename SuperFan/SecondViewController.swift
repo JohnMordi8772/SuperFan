@@ -15,8 +15,8 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = storage.string(forKey: "Username")
-        nameLabel.adjustsFontForContentSizeCategory = true
+       // nameLabel.text = storage.string(forKey: "Username")
+      //  nameLabel.adjustsFontForContentSizeCategory = true
 
      
     }
@@ -64,6 +64,6 @@ class SecondViewController: UIViewController {
         if (textField == code[12]) {
             pointCounter.text = String(counter + 100)
         }
-        
+     print((storage.string(forKey: "Points") ?? "NIL"))
 }
 }
