@@ -9,7 +9,7 @@ class SecondViewController: UIViewController {
     let points:[Float] = [10,20,30,40,50,60,70,80,90,100,110,120,130]
     @IBOutlet weak var codeTextField: UITextField!
     @IBOutlet weak var pointsLabel: UILabel!
-    @IBOutlet weak var pointCounter: UILabel!
+
     @IBOutlet weak var nameLabel: UILabel!
     var counter: Float!
     
