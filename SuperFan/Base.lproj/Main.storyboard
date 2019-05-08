@@ -52,7 +52,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zPS-7d-74m"/>
+                                    <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bjl-om-h9V"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Super Fan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0e-Zh-XRi">
@@ -66,9 +66,6 @@
                                 <rect key="frame" x="164" y="617" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="S5K-cR-Dpo" kind="show" id="Etg-dL-VRm"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,8 +73,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="8oZ-8R-R9f"/>
                     <connections>
+                        <outlet property="emailLog" destination="JJQ-km-riy" id="OOd-vi-6HK"/>
+                        <outlet property="passwordLog" destination="HnS-bN-wMz" id="IdD-g4-6nE"/>
                         <outlet property="titleLabel" destination="c0e-Zh-XRi" id="UPL-qg-k5B"/>
-                        <outlet property="usernameTextField" destination="JJQ-km-riy" id="azF-fp-z5K"/>
                         <segue destination="S5K-cR-Dpo" kind="presentation" identifier="segueToSecondController" id="N9F-sk-9uD"/>
                     </connections>
                 </viewController>
@@ -169,7 +167,4 @@
     <resources>
         <image name="tiger" width="2231" height="2227"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="N9F-sk-9uD"/>
-    </inferredMetricsTieBreakers>
 </document>

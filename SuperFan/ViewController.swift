@@ -5,7 +5,6 @@ import UIKit
 class ViewController: UIViewController {
 
     let storage = UserDefaults.standard
-    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emailLog: UITextField!
     @IBOutlet weak var passwordLog: UITextField!
@@ -14,7 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     titleLabel.adjustsFontForContentSizeCategory = true
-        
     }
 
     @IBAction func createAccountButton(_ sender: UIButton) {
@@ -30,12 +28,12 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-    @IBAction func logButton(_ sender: Any) {
+    @IBAction func logInButton(_ sender: UIButton) {
         if (emailLog.text == storage.string(forKey: "Username")) {
             if(passwordLog.text == storage.string(forKey: "Password")){
-       performSegue(withIdentifier: "segueToSecondController", sender: nil)
-                
-            }
+                performSegue(withIdentifier: "segueToSecondController", sender: nil)
+    }
+   
         }
     
     
