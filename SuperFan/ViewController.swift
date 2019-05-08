@@ -5,6 +5,7 @@ import UIKit
 class ViewController: UIViewController {
 
     let storage = UserDefaults.standard
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var emailLog: UITextField!
     @IBOutlet weak var passwordLog: UITextField!
