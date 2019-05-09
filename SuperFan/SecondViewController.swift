@@ -25,6 +25,9 @@ class SecondViewController: UIViewController {
         counter = storage.float(forKey: "Value")
         }
         pointsLabel.text = "\(counter!)"
+       // nameLabel.text = storage.string(forKey: "Username")
+      //  nameLabel.adjustsFontForContentSizeCategory = true
+
      
     }
     @IBAction func redeemButton(_ sender: Any) {
@@ -40,6 +43,6 @@ class SecondViewController: UIViewController {
                 present(alert, animated: true, completion: nil)
             }
         }
-        
+     print((storage.string(forKey: "Points") ?? "NIL"))
 }
 }
