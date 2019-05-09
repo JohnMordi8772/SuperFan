@@ -1,8 +1,10 @@
 
 
 import UIKit
+import MapKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, CLLocationManagerDelegate {
+    let locationManager = CLLocationManager()
     let storage = UserDefaults.standard
     let sport:[String] = ["Football", "Basketball", "Baseball", "Soccer", "Volleyball", "Tennis", "Wrestling", "Softball", "Track and Field", "Golf", "Choir Concert", "Play", "Musical"]
     let code:[String] = ["98362","19875","07520","76389","65930","84390","12485","06493","67054","18549","37589","09568", "23458"]
@@ -16,6 +18,7 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
         nameLabel.text = storage.string(forKey: "Username")
         nameLabel.adjustsFontSizeToFitWidth = true
         if(storage.float(forKey: "Value") == nil){
