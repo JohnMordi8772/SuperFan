@@ -25,8 +25,8 @@ class SecondViewController: UIViewController {
         counter = storage.float(forKey: "Value")
         }
         pointsLabel.text = "\(counter!)"
-       // nameLabel.text = storage.string(forKey: "Username")
-      //  nameLabel.adjustsFontForContentSizeCategory = true
+       nameLabel.text = storage.string(forKey: "Username")
+      nameLabel.adjustsFontSizeToFitWidth = true
 
      
     }
