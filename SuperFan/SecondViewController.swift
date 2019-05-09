@@ -17,7 +17,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = storage.string(forKey: "Username")
-        nameLabel.adjustsFontForContentSizeCategory = true
+        nameLabel.adjustsFontSizeToFitWidth = true
         if(storage.float(forKey: "Value") == nil){
             counter = 0
         }
@@ -28,12 +28,16 @@ class SecondViewController: UIViewController {
      
     }
     @IBAction func redeemButton(_ sender: Any) {
-        let textField = codeTextField.text
         for i in 0...code.count-1{
             if(codeTextField.text == code[i]){
                 counter += points[i]
                 storage.set(counter, forKey: "Value")
                 pointsLabel.text = "\(counter!)"
+            }
+            else{
+                let alert = UIAlertController(title: "That is not a valid code. Please enter a valid code.", message: nil, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Done", style: .default, handler: {action in self.codeTextField.text = ""}))
+                present(alert, animated: true, completion: nil)
             }
         }
         
