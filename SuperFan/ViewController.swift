@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func createAccountButton(_ sender: UIButton) {
-        print((storage.string(forKey: "Username") ?? "NIL") + (storage.string(forKey: "Password") ?? "NIL"))
+        //print((storage.string(forKey: "Username") ?? "NIL") + (storage.string(forKey: "Password") ?? "NIL"))
         let alert = UIAlertController(title: "Account Creation", message: nil, preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
         alert.textFields![0].placeholder = "Create Username"

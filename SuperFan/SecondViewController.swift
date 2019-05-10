@@ -1,8 +1,10 @@
 
 
 import UIKit
+import MapKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, CLLocationManagerDelegate {
+    let locationManager = CLLocationManager()
     let storage = UserDefaults.standard
     let sport:[String] = ["Football", "Basketball", "Baseball", "Soccer", "Volleyball", "Tennis", "Wrestling", "Softball", "Track and Field", "Golf", "Choir Concert", "Play", "Musical"]
     let code:[String] = ["98362","19875","07520","76389","65930","84390","12485","06493","67054","18549","37589","09568", "23458"]
@@ -16,8 +18,9 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
         nameLabel.text = storage.string(forKey: "Username")
-        nameLabel.adjustsFontForContentSizeCategory = true
+        nameLabel.adjustsFontSizeToFitWidth = true
         if(storage.float(forKey: "Value") == nil){
             counter = 0
         }
@@ -25,18 +28,22 @@ class SecondViewController: UIViewController {
         counter = storage.float(forKey: "Value")
         }
         pointsLabel.text = "\(counter!)"
-       // nameLabel.text = storage.string(forKey: "Username")
-      //  nameLabel.adjustsFontForContentSizeCategory = true
+       nameLabel.text = storage.string(forKey: "Username")
+      nameLabel.adjustsFontSizeToFitWidth = true
 
      
     }
     @IBAction func redeemButton(_ sender: Any) {
-        let textField = codeTextField.text
         for i in 0...code.count-1{
             if(codeTextField.text == code[i]){
                 counter += points[i]
                 storage.set(counter, forKey: "Value")
                 pointsLabel.text = "\(counter!)"
+            }
+            else{
+                let alert = UIAlertController(title: "That is not a valid code. Please enter a valid code.", message: nil, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Done", style: .default, handler: {action in self.codeTextField.text = ""}))
+                present(alert, animated: true, completion: nil)
             }
         }
      print((storage.string(forKey: "Points") ?? "NIL"))
