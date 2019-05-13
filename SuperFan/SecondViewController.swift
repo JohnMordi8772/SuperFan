@@ -11,7 +11,6 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate {
     let points:[Float] = [10,20,30,40,50,60,70,80,90,100,110,120,130]
     @IBOutlet weak var codeTextField: UITextField!
     @IBOutlet weak var pointsLabel: UILabel!
-
     @IBOutlet weak var nameLabel: UILabel!
     var counter: Float!
     
@@ -19,6 +18,9 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
         nameLabel.text = storage.string(forKey: "Username")
         nameLabel.adjustsFontSizeToFitWidth = true
         if(storage.float(forKey: "Value") == nil){
@@ -34,6 +36,13 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate {
      
     }
     @IBAction func redeemButton(_ sender: Any) {
+        let dist = locationManager.location?.distance(from: CLLocation(latitude: 42.237213, longitude: -88.322553))
+        if(dist!.binade >= 20.0){
+            let alert = UIAlertController(title: "You are not at the event. You must be at the event to claim your points.", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Done", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+        else{
         for i in 0...code.count-1{
             if(codeTextField.text == code[i]){
                 counter += points[i]
@@ -44,6 +53,7 @@ class SecondViewController: UIViewController, CLLocationManagerDelegate {
                 let alert = UIAlertController(title: "That is not a valid code. Please enter a valid code.", message: nil, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Done", style: .default, handler: {action in self.codeTextField.text = ""}))
                 present(alert, animated: true, completion: nil)
+            }
             }
         }
      print((storage.string(forKey: "Points") ?? "NIL"))
